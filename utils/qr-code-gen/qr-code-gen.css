@@ -1,0 +1,19 @@
+#qr-form, #qrcode {
+    background-color: azure;
+    padding: 2rem;
+    border-radius: 1.2rem;
+}
+
+#qrcode {
+    display: none;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+#qrcode p {
+    padding: 1rem;
+}
+
+#qrcode canvas {
+    width: 100%;
+}

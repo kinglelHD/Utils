@@ -1,0 +1,38 @@
+header {
+    display: block;
+}
+
+nav {
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+nav .util {
+    background-color: azure;
+    border-radius: 1.2rem;
+    outline: .25rem solid mediumslateblue;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    width: 16rem;
+}
+
+nav .util p {
+    padding: 2rem;
+}
+
+nav .util h2 {
+    border-radius: 1.2rem 1.2rem 0 0;
+    padding: 4rem 1rem;
+}
+
+#qr-code-gen img {
+    max-width: 100%;
+    border-radius: 1.2rem 1.2rem 0 0;
+}
+
+#counter h2 {
+    background-color: deeppink;
+}

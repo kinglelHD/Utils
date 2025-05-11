@@ -1,0 +1,9 @@
+header, footer {
+    background-color: aqua;
+}
+
+#info {
+    padding: 2rem;
+    background-color: azure;
+    border-radius: 1.2rem;
+}

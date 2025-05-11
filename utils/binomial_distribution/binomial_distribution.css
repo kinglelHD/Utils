@@ -1,0 +1,38 @@
+header, footer {
+    background-color: midnightblue;
+    color: white;
+}
+
+#back {
+    outline-color: white;
+    color: white;
+}
+
+form, canvas {
+    background-color: azure;
+    padding: 2rem;
+    border-radius: 1.2rem;
+}
+
+form {
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+form p {
+    margin-block: 1em;
+    grid-column: span 2;
+}
+
+form button {
+    width: fit-content;
+    margin: 0 auto;
+    grid-column: span 2;
+}
+
+input {
+    margin-bottom: 1em;
+}

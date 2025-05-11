@@ -54,14 +54,20 @@ input {
     padding: 1em 2em;
     border-radius: 1.2em;
     border: .125em solid black;
+    font-size: 1rem;
 }
 
 button[type=submit] {
+    font-size: 1rem;
     padding: 1em 2em;
     border-radius: 1.2em;
     background-color: mediumslateblue;
     color: white;
     border: .125em solid black;
+}
+
+input[type=range] {
+    accent-color: mediumslateblue;
 }
 
 input:focus, button:focus {

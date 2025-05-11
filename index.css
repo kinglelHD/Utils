@@ -3,10 +3,10 @@ header {
 }
 
 nav {
-    display: grid;
+    display: inline-grid;
     gap: 2rem;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    width: 100%;
 }
 
 nav .util {
@@ -17,6 +17,7 @@ nav .util {
     color: black;
     text-align: center;
     width: 16rem;
+    height: fit-content;
 }
 
 nav .util p {
@@ -35,4 +36,22 @@ nav .util h2 {
 
 #counter h2 {
     background-color: deeppink;
+}
+
+#random-gen h2 {
+    background-color: yellow;
+}
+
+#binomial_distribution h2 {
+    background-color: midnightblue;
+    color: white;
+}
+
+#device-info h2 {
+    background-color: aqua;
+}
+
+#binomial_distribution, #random-gen {
+    pointer-events: none;
+    background-color: gray;
 }

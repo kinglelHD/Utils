@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>device info</title>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="device-info.css">
+    </script>
+</head>
+<body>
+    <header>
+        <a id="back" href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg></a>
+        <div>
+            <h1>device info</h1>
+            <p>for debugging</p>
+        </div>
+        <div></div>
+    </header>
+    <main>
+        <div id="info"></div>
+    </main>
+    <footer>pls report any bugs to Hilmarlemcke@outlook.de</footer>
+</body>
+<script>
+    let info = document.getElementById('info')
+    let innerWidth = document.createElement('p')
+    let innerHeight = document.createElement('p')
+    innerWidth.innerText = "window.innerWidth: " + window.innerWidth + "px"
+    innerHeight.innerText = "window.innerHeight: " + window.innerHeight + "px"
+    window.addEventListener('resize', () => {
+        innerWidth.innerText = "window.innerWidth: " + window.innerWidth + "px"
+        innerHeight.innerText = "window.innerHeight: " + window.innerHeight + "px"
+    })
+    info.appendChild(innerWidth)
+    info.appendChild(innerHeight)
+</script>
+</html>

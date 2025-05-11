@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binomial distribution</title>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="binomial_distribution.css">
+    </script>
+</head>
+<body>
+    <header>
+        <a id="back" href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="none" stroke="CurrentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg></a>
+        <div>
+            <h1>binomial distribution</h1>
+            <p>a tool to calculate probabilities</p>
+        </div>
+        <div></div>
+    </header>
+    <main>
+        <form onsubmit="calc(); return false">
+            <label for="n">Number of attempts (n): </label>
+            <input min="0" id="n" type="number">
+            <label for="p">Probability of a match (p): </label>
+            <input min="0" step=".01" max="1" id="p" type="number">
+            <br><br>
+            <p>Number of matches (k):</p>
+            <label id="k-min-label" for="k-min">min: </label>
+            <input min="0" id="k-min" type="range" oninput="document.getElementById('k-min-label').innerText = 'min: ' + value">
+            <label id="k-max-label" for="k-max">max: </label>
+            <input min="0" id="k-max" type="range" oninput="document.getElementById('k-max-label').innerText = 'max: ' + value">
+            <button type="submit">calculate</button>
+        </form>
+        <canvas id="histogram"></canvas>
+    </main>
+    <footer>pls report any bugs to Hilmarlemcke@outlook.de</footer>
+</body>
+<script>
+    function calc() {
+        
+    }
+</script>
+</html>

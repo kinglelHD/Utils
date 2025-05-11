@@ -44,6 +44,10 @@ input {
     border-radius: 1.2rem;
 }
 
+#histogram {
+    height: 100%;
+}
+
 #ans {
     background-color: mediumslateblue;
     color: white;

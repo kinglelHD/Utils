@@ -26,9 +26,9 @@
             <br><br>
             <p>Number of matches (k):</p>
             <label id="k-min-label" for="k-min">min: 0</label>
-            <input min="0" id="k-min" type="range" oninput="calc();document.getElementById('k-max').min = value;document.getElementById('k-min-label').innerText = 'min: ' + value">
+            <input min="0" id="k-min" type="range" oninput="document.getElementById('k-max').min = value;document.getElementById('k-min-label').innerText = 'min: ' + value;calc()">
             <label id="k-max-label" for="k-max">max: 0</label>
-            <input min="0" id="k-max" type="range" oninput="calc();document.getElementById('k-min').max = value;document.getElementById('k-max-label').innerText = 'max: ' + value">
+            <input min="0" id="k-max" type="range" oninput="document.getElementById('k-min').max = value;document.getElementById('k-max-label').innerText = 'max: ' + value;calc()">
         </form>
         <canvas id="histogram"></canvas>
         <p id="ans"></p>

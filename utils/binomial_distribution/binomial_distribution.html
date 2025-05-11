@@ -6,7 +6,7 @@
     <title>binomial distribution</title>
     <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="binomial_distribution.css">
-    </script>
+    <script defer src="binomial_distribution.js"></script>
 </head>
 <body>
     <header>
@@ -18,26 +18,21 @@
         <div></div>
     </header>
     <main>
-        <form onsubmit="calc(); return false">
+        <form id="input-form" onsubmit="return false">
             <label for="n">Number of attempts (n): </label>
-            <input min="0" id="n" type="number">
+            <input value="0" oninput="calc();document.getElementById('k-max').max = value;document.getElementById('k-min').max = value;" min="0" id="n" type="number">
             <label for="p">Probability of a match (p): </label>
-            <input min="0" step=".01" max="1" id="p" type="number">
+            <input value="1" oninput="calc()" min="0" step=".01" max="1" id="p" type="number">
             <br><br>
             <p>Number of matches (k):</p>
-            <label id="k-min-label" for="k-min">min: </label>
-            <input min="0" id="k-min" type="range" oninput="document.getElementById('k-min-label').innerText = 'min: ' + value">
-            <label id="k-max-label" for="k-max">max: </label>
-            <input min="0" id="k-max" type="range" oninput="document.getElementById('k-max-label').innerText = 'max: ' + value">
-            <button type="submit">calculate</button>
+            <label id="k-min-label" for="k-min">min: 0</label>
+            <input min="0" id="k-min" type="range" oninput="calc();document.getElementById('k-max').min = value;document.getElementById('k-min-label').innerText = 'min: ' + value">
+            <label id="k-max-label" for="k-max">max: 0</label>
+            <input min="0" id="k-max" type="range" oninput="calc();document.getElementById('k-min').max = value;document.getElementById('k-max-label').innerText = 'max: ' + value">
         </form>
         <canvas id="histogram"></canvas>
+        <p id="ans"></p>
     </main>
     <footer>pls report any bugs to Hilmarlemcke@outlook.de</footer>
 </body>
-<script>
-    function calc() {
-        
-    }
-</script>
 </html>

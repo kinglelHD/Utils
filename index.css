@@ -47,11 +47,19 @@ nav .util h2 {
     color: white;
 }
 
+#hex-dec-bin h2 {
+    background-color: darkolivegreen;
+}
+
+#color-picker h2 {
+    background-color: burlywood;
+}
+
 #device-info h2 {
     background-color: aqua;
 }
 
-#binomial_distribution, #random-gen {
+#binomial_distribution, #random-gen, #hex-dec-bin, #color-picker {
     pointer-events: none;
     background-color: gray;
 }

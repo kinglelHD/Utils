@@ -59,7 +59,7 @@ nav .util h2 {
     background-color: aqua;
 }
 
-#binomial_distribution, #random-gen, #hex-dec-bin, #color-picker {
+#random-gen, #hex-dec-bin, #color-picker {
     pointer-events: none;
     background-color: gray;
 }

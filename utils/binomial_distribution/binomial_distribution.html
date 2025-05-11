@@ -20,15 +20,15 @@
     <main>
         <form id="input-form" onsubmit="return false">
             <label for="n">Number of attempts (n): </label>
-            <input value="0" oninput="calc();document.getElementById('k-max').max = value;document.getElementById('k-min').max = value;" min="0" id="n" type="number">
+            <input value="5" oninput="calc();document.getElementById('k-max').max = value;document.getElementById('k-min').max = value;" min="0" id="n" type="number">
             <label for="p">Probability of a match (p): </label>
-            <input value="1" oninput="calc()" min="0" step=".01" max="1" id="p" type="number">
+            <input value="0.5" oninput="calc()" min="0" step=".01" max="1" id="p" type="number">
             <br><br>
             <p>Number of matches (k):</p>
-            <label id="k-min-label" for="k-min">min: 0</label>
-            <input min="0" id="k-min" type="range" oninput="document.getElementById('k-max').min = value;document.getElementById('k-min-label').innerText = 'min: ' + value;calc()">
-            <label id="k-max-label" for="k-max">max: 0</label>
-            <input min="0" id="k-max" type="range" oninput="document.getElementById('k-min').max = value;document.getElementById('k-max-label').innerText = 'max: ' + value;calc()">
+            <label id="k-min-label" for="k-min">min: 1</label>
+            <input min="0" max="2" value="1" id="k-min" type="range" oninput="document.getElementById('k-max').min = value;document.getElementById('k-min-label').innerText = 'min: ' + value;calc()">
+            <label id="k-max-label" for="k-max">max: 2</label>
+            <input min="0" max="5" value="2" id="k-max" type="range" oninput="document.getElementById('k-min').max = value;document.getElementById('k-max-label').innerText = 'max: ' + value;calc()">
         </form>
         <canvas id="histogram"></canvas>
         <p id="ans"></p>

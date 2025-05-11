@@ -53,8 +53,8 @@ function calc() {
         ctx.fillRect(i*barWidth, canvas.height - height, barWidth, height)
         ctx.fillStyle = 'black'
         ctx.fillRect(i*barWidth, 0, 1, canvas.height)
-        ctx.fillRect(i*barWidth, 0, 1, canvas.height)
     }
+    ctx.fillRect((n+1)*barWidth - 1, 0, 1, canvas.height)
     document.getElementById('ans').style.display = 'block'
     document.getElementById('ans').innerText = `P(${kmin == kmax ? "X = " + kmin : kmin + " ≤ X ≤ " + kmax}) = ` + Math.floor(ins * 100000) / 100000
 }

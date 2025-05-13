@@ -6,7 +6,7 @@
     <title>device info</title>
     <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="device-info.css">
-    </script>
+    <script defer src="device-info.js"></script>
 </head>
 <body>
     <header>
@@ -22,17 +22,4 @@
     </main>
     <footer>pls report any bugs to Hilmarlemcke@outlook.de</footer>
 </body>
-<script>
-    let info = document.getElementById('info')
-    let innerWidth = document.createElement('p')
-    let innerHeight = document.createElement('p')
-    innerWidth.innerText = "window.innerWidth: " + window.innerWidth + "px"
-    innerHeight.innerText = "window.innerHeight: " + window.innerHeight + "px"
-    window.addEventListener('resize', () => {
-        innerWidth.innerText = "window.innerWidth: " + window.innerWidth + "px"
-        innerHeight.innerText = "window.innerHeight: " + window.innerHeight + "px"
-    })
-    info.appendChild(innerWidth)
-    info.appendChild(innerHeight)
-</script>
 </html>

@@ -50,14 +50,14 @@ header h1 {
     font-size: 4rem;
 }
 
-input {
+input, select {
     padding: 1em 2em;
     border-radius: 1.2em;
     border: .125em solid black;
     font-size: 1rem;
 }
 
-button[type=submit] {
+button {
     font-size: 1rem;
     padding: 1em 2em;
     border-radius: 1.2em;
@@ -71,5 +71,5 @@ input[type=range] {
 }
 
 input:focus, button:focus {
-    outline: .25em solid cornflowerblue;
+    outline: .25rem solid cornflowerblue;
 }

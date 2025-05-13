@@ -18,18 +18,31 @@
         <div></div>
     </header>
     <main>
-        <form id="input-form" onsubmit="return false">
+        <form id="input-form">
             <label for="n">Number of attempts (n): </label>
             <input value="5" oninput="calc();document.getElementById('k-max').max = value;document.getElementById('k-min').max = value;" min="0" id="n" type="number">
             <label for="p">Probability of a match (p): </label>
             <input value="0.5" oninput="calc()" min="0" step=".01" max="1" id="p" type="number">
-            <br><br>
+            <hr style="grid-column: span 2;">
             <p>Number of matches (k):</p>
-            <label id="k-min-label" for="k-min">min: 1</label>
+            <select name="k-select" id="k-select">
+                <option value="1">"k" gleich "a" (k = a)</option>
+                <option value="2">"k" größer "a" (k > a)</option>
+                <option value="3">"k" kleiner "a" (k < a)</option>
+                <option value="4">"k" höchstens "a" (k ≤ a)</option>
+                <option value="5">"k" mindestens "a" (k ≥ a)</option>
+                <option value="6">"k" größer "a" kleiner "b" (a < k < b)</option>
+                <option value="7">"k" größer "a" höchstens "b" (a < k ≤ b)</option>
+                <option value="8">"k" mindestens "a" kleiner "b" (a ≤ k < b)</option>
+                <option value="9">"k" mindestens "a" höchstens "b" (a ≤ k ≤ b)</option>
+            </select>
+            <button type="button" onclick="new KInput(document.getElementById('k-select').value)">add</button>
+            <!-- <label id="k-min-label" for="k-min">min: 1</label>
             <input min="0" max="2" value="1" id="k-min" type="range" oninput="document.getElementById('k-max').min = value;document.getElementById('k-min-label').innerText = 'min: ' + value;calc()">
             <label id="k-max-label" for="k-max">max: 2</label>
-            <input min="0" max="5" value="2" id="k-max" type="range" oninput="document.getElementById('k-min').max = value;document.getElementById('k-max-label').innerText = 'max: ' + value;calc()">
+            <input min="0" max="5" value="2" id="k-max" type="range" oninput="document.getElementById('k-min').max = value;document.getElementById('k-max-label').innerText = 'max: ' + value;calc()"> -->
         </form>
+        <p id="warning">Some values for "k" are counted twice!</p>
         <canvas id="histogram"></canvas>
         <p id="ans"></p>
     </main>

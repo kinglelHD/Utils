@@ -250,7 +250,7 @@ function calc() {
         ctx.fillRect(i*barWidth, 0, 1, canvas.height)
     }
     ctx.fillRect((n+1)*barWidth - 1, 0, 1, canvas.height)
-    document.getElementById('ans').innerText = text + ' ≈ ' + Math.floor(ins * 100000000) / 100000000
+    document.getElementById('ans').innerText = text + ' ≈ ' + Math.round(ins * 100000000) / 100000000
 }
 
 new KInput(1)

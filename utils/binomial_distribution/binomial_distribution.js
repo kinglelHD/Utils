@@ -71,6 +71,7 @@ class KInput {
         this.p.innerText = this.text
         input_form.appendChild(this.div)
         kinput_array.push(this)
+        calc()
     }
     updateKarrayMax(n = document.getElementById('n').value != "" ? parseInt(document.getElementById('n').value) : 0) {
         this.karray = []
@@ -169,7 +170,6 @@ class KInput {
         }
     }
 }
-new KInput(1)
 
 const canvas = document.getElementById('histogram')
 const ctx = canvas.getContext('2d')
@@ -205,14 +205,14 @@ function calc() {
     kinput_array.forEach(kinput => {
         kinput.updateKarrayMax(n)
         if (kinput.isvalid) {
-            text += kinput.text + " + "
+            text += " + " + kinput.text
             kinput.karray.forEach(k => {
                 karray.push(k)
             })
         }
     })
     if (text != '') {
-        text.slice(-3, text.length)
+        text = text.slice(3)
         const set = new Set(karray)
         if (karray.length != set.size) {
             document.getElementById('warning').style.display = 'block'
@@ -220,14 +220,17 @@ function calc() {
             document.getElementById('warning').style.display = 'none'
         }
     } else {
-        text = 'P(X) = ?'
+        text = 'P(X)'
     }
     let ins = 0
     let P_array = []
     let max = 0
     for(let i = 0; i < n + 1; i++){
         let P = PX(n, p, i)
-        if (karray.includes(i)) ins += P
+        if (karray.includes(i)) {
+            const array = karray.filter(k => k == i)
+            ins += P * array.length
+        }
         P_array.push(P)
         if (P * canvas.height > max) max = P * canvas.height
     }
@@ -247,7 +250,7 @@ function calc() {
         ctx.fillRect(i*barWidth, 0, 1, canvas.height)
     }
     ctx.fillRect((n+1)*barWidth - 1, 0, 1, canvas.height)
-    document.getElementById('ans').innerText = text + ' = ' + Math.floor(ins * 100000000) / 100000000
+    document.getElementById('ans').innerText = text + ' ≈ ' + Math.floor(ins * 100000000) / 100000000
 }
 
-calc()
+new KInput(1)

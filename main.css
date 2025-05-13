@@ -6,7 +6,7 @@
 }
 
 :root {
-    font-size: min(calc(6px + 1vw), 24px);
+    font-size: min(calc(6px + 1vw), 20px);
 }
 
 body {
@@ -27,7 +27,7 @@ main {
 header, footer {
     text-align: center;
     padding: 2rem;
-    background-color: mediumslateblue;
+    background-color: #7b68ee;
 }
 
 header {

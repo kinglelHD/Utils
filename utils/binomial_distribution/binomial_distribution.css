@@ -51,21 +51,32 @@ form p {
 .k-input {
     background-color: rgba(123, 104, 238, .5);
     padding: 2rem;
+    padding-top: 5rem;
     border-radius: 1.2rem;
-    grid-column: span 2;
-    display: grid;
+    display: flex;
+    gap: 1rem;
     align-items: baseline;
     position: relative;
 }
 
+.k-input input {
+    width: 100%;
+}
+
 .k-input p {
-    padding-bottom: 2rem;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    color: mediumslateblue;
 }
 
 .k-input button {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 2rem;
     border-radius: 50%;
     aspect-ratio: 1;
     font-size: 3rem;

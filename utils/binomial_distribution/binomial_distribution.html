@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>binomial distribution</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="binomial_distribution.css">
     <script defer src="binomial_distribution.js"></script>
@@ -20,7 +24,7 @@
     <main>
         <form id="input-form">
             <label for="n">Number of attempts (n): </label>
-            <input value="5" oninput="calc();document.getElementById('k-max').max = value;document.getElementById('k-min').max = value;" min="0" id="n" type="number">
+            <input value="5" oninput="calc()" min="0" id="n" type="number">
             <label for="p">Probability of a match (p): </label>
             <input value="0.5" oninput="calc()" min="0" step=".01" max="1" id="p" type="number">
             <hr style="grid-column: span 2;">
@@ -37,10 +41,6 @@
                 <option value="9">"k" mindestens "a" höchstens "b" (a ≤ k ≤ b)</option>
             </select>
             <button type="button" onclick="new KInput(document.getElementById('k-select').value)">add</button>
-            <!-- <label id="k-min-label" for="k-min">min: 1</label>
-            <input min="0" max="2" value="1" id="k-min" type="range" oninput="document.getElementById('k-max').min = value;document.getElementById('k-min-label').innerText = 'min: ' + value;calc()">
-            <label id="k-max-label" for="k-max">max: 2</label>
-            <input min="0" max="5" value="2" id="k-max" type="range" oninput="document.getElementById('k-min').max = value;document.getElementById('k-max-label').innerText = 'max: ' + value;calc()"> -->
         </form>
         <p id="warning">Some values for "k" are counted twice!</p>
         <canvas id="histogram"></canvas>

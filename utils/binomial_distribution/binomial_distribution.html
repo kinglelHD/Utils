@@ -26,7 +26,12 @@
             <label for="n">Number of attempts (n): </label>
             <input value="5" oninput="calc()" min="0" id="n" type="number">
             <label for="p">Probability of a match (p): </label>
-            <input value="0.5" oninput="calc()" min="0" step=".01" max="1" id="p" type="number">
+            <div id="p">
+                <input value="50" oninput="calc()" min="0" max="100" id="pz" type="number">
+                <p id="p-out">≈ 50%</p> <!-- pz -> p zähler | pn -> p nenner -->
+                <hr>
+                <input value="100" oninput="calc()" min="1" id="pn" type="number">
+            </div>
             <hr style="grid-column: span 2;">
             <p>Number of matches (k):</p>
             <select name="k-select" id="k-select">

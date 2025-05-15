@@ -102,3 +102,24 @@ input:invalid {
     padding: 1rem 2rem;
     border-radius: 1.2rem;
 }
+
+#p {
+    display: grid;
+    align-items: center;
+    gap: .5rem;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto 1fr;
+    padding: .5em;
+    border: .2rem solid black;
+    border-radius: 1.2rem;
+}
+
+#p p {
+    grid-column: span 1;
+    grid-row: span 3;
+    padding-inline: 2rem;
+}
+
+#p input {
+    text-align: center;
+}

@@ -198,7 +198,11 @@ function PX(n, p, k) {
 function calc() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     const n = document.getElementById('n').value != "" ? parseInt(document.getElementById('n').value) : 0
-    const p = document.getElementById('p').value
+    const pn = document.getElementById('pn')
+    const pz = document.getElementById('pz')
+    pz.max = pn.value
+    const p = Math.max(Math.min(pz.value / pn.value, 1), 0)
+    document.getElementById('p-out').innerText ='≈ ' + Math.round(p * 100) + '%'
     const barWidth = canvas.width / (n + 1)
     let karray = []
     let text = ''

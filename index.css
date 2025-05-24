@@ -3,22 +3,20 @@ header {
 }
 
 nav {
-    display: inline-grid;
+    display: flex;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     width: 100%;
-    justify-items: center;
+    flex-wrap: wrap;
 }
 
 nav .util {
+    flex-grow: 1;
     background-color: azure;
     border-radius: 1.2rem;
     outline: .25rem solid mediumslateblue;
     text-decoration: none;
     color: black;
     text-align: center;
-    width: 16rem;
-    height: fit-content;
 }
 
 nav .util p {
@@ -31,7 +29,8 @@ nav .util h2 {
 }
 
 #qr-code-gen img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 12rem;
     border-radius: 1.2rem 1.2rem 0 0;
 }
 
@@ -60,7 +59,7 @@ nav .util h2 {
     background-color: aqua;
 }
 
-#random-gen, #hex-dec-bin, #color-picker {
+#hex-dec-bin, #color-picker {
     pointer-events: none;
     background-color: gray;
 }

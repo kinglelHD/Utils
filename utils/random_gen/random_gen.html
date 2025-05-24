@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Gen</title>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="random_gen.css">
+    <script defer src="random_gen.js"></script>
+</head>
+<body>
+    <header>
+        <a id="back" href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg></a>
+        <div>
+            <h1>Random Gen</h1>
+            <p>generate random numbers</p>
+        </div>
+        <div></div>
+    </header>
+    <main>
+        <form onsubmit="calc();return false">
+            <label for="min">min: </label>
+            <input value="1" min="0" oninput="document.getElementById('max').min = Math.max(value, 0)" type="number" name="min" id="min" type="text">
+            <label for="max">max: </label>
+            <input value="10" min="0" oninput="document.getElementById('min').max = Math.max(value, 0)" type="number" name="max" id="max" type="text">
+            <button type="submit">generate</button>
+        </form>
+        <p style="display: none;" class="output"></p>
+    </main>
+    <footer>pls report any bugs to Hilmarlemcke@outlook.de</footer>
+</body>
+</html>

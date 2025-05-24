@@ -1,6 +1,6 @@
-header, footer {
-    background-color: midnightblue;
-    color: white;
+:root {
+    --main-color: midnightblue;
+    --main-text-color: white;
 }
 
 #back {

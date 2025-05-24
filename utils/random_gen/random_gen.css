@@ -1,0 +1,21 @@
+:root {
+    --main-color: yellow;
+    --second-color: white;
+}
+
+.output, form {
+    padding: 2rem;
+    border-radius: 1.2rem;
+    background-color: lightgray;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+button {
+    grid-column: span 2;
+}

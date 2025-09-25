@@ -30,7 +30,9 @@ nav .util h2 {
 
 #qr-code-gen img {
     width: 100%;
-    max-width: 12rem;
+    max-height: 12rem;
+    object-fit: contain;
+    background-color: white;
     border-radius: 1.2rem 1.2rem 0 0;
 }
 
@@ -40,6 +42,10 @@ nav .util h2 {
 
 #random-gen h2 {
     background-color: yellow;
+}
+
+#fileShare h2 {
+    background-color: blueviolet;
 }
 
 #binomial_distribution h2 {

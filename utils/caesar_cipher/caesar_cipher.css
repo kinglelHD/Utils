@@ -1,0 +1,27 @@
+:root {
+    --main-color: rgb(128, 34, 34);
+    --second-color: rgb(235, 199, 137);
+}
+
+#output{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    margin-top: 1rem;
+
+    > div {
+        padding: 1rem;
+
+        > h2 {
+            font-size: 2rem;
+        }
+        > p {
+            font-size: 1.6rem;
+            word-break: break-all;
+        }
+    }
+}
+
+main {
+    gap: 4rem;
+}

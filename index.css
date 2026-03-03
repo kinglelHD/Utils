@@ -27,7 +27,7 @@ nav .util h2 {
     padding: 4rem 1rem;
 }
 
-#qr-code-gen img {
+.util-header-image {
     width: 100%;
     max-height: 12rem;
     object-fit: contain;
@@ -35,41 +35,7 @@ nav .util h2 {
     border-radius: 1.2rem 1.2rem 0 0;
 }
 
-#counter h2 {
-    background-color: deeppink;
-}
-
-#random-gen h2 {
-    background-color: yellow;
-}
-
-#caesar-cipher h2 {
-    background-color: rgb(128, 34, 34);
-    color: rgb(235, 199, 137);
-}
-
-#fileShare h2 {
-    background-color: blueviolet;
-}
-
-#binomial_distribution h2 {
-    background-color: midnightblue;
-    color: white;
-}
-
-#hex-dec-bin h2 {
-    background-color: darkolivegreen;
-}
-
-#color-picker h2 {
-    background-color: burlywood;
-}
-
-#device-info h2 {
-    background-color: aqua;
-}
-
-.util.not_implemented {
+.util.not-implemented {
     background-color: gray;
     cursor: not-allowed;
     opacity: .75;

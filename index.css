@@ -3,14 +3,13 @@ header {
 }
 
 nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     gap: 2rem;
     width: 100%;
-    flex-wrap: wrap;
 }
 
 nav .util {
-    flex-grow: 1;
     background-color: azure;
     border-radius: 1.2rem;
     outline: .25rem solid mediumslateblue;
@@ -70,7 +69,8 @@ nav .util h2 {
     background-color: aqua;
 }
 
-#hex-dec-bin, #color-picker {
-    pointer-events: none;
+.util.not_implemented {
     background-color: gray;
+    cursor: not-allowed;
+    opacity: .75;
 }

@@ -51,4 +51,5 @@ addUtil(new Util('Binomial Distribution', 'calculate probabilities', 'utils/bino
 addUtil(new Util('Hex Dec Bin Converter', 'convert number formats', 'utils/hex-dec-bin/hex-dec-bin.html', 'darkolivegreen', 'black', null, true))
 addUtil(new Util('Color Picker', 'choose your own color', 'utils/color-picker/color-picker.html', 'burlywood', 'black', null, true))
 addUtil(new Util('Counter', 'keep track of count (redirect)', 'https://hilmardd.netlify.app/counter', 'deeppink'))
+addUtil(new Util('Wizard', 'ein digitaler Block der Wahrheit (redirect)', 'https://blockderwahrheit.netlify.app', '#E50005','#FDB702'))
 addUtil(new Util('Device Info', 'for debugging', 'utils/device-info/device-info.html', 'aqua'))

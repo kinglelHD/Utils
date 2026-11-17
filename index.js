@@ -45,6 +45,7 @@ function addUtil(util) {
 
 addUtil(new Util('QR Code Generator', 'generate QR Codes', 'utils/qr-code-gen/qr-code-gen.html', 'white', 'black', 'assets/NeverGonnaGiveYouUp.png'))
 addUtil(new Util('File Share', 'share files (redirect)', 'https://fileshare-xc6v.onrender.com', 'blueviolet'))
+addUtil(new Util('Custom Message', 'generate a personalised digital message (redirect)', 'https://custommessages.netlify.app', 'cadetblue', 'white'))
 addUtil(new Util('Random Generator', 'generate random numbers', 'utils/random_gen/random_gen.html', 'yellow'))
 addUtil(new Util('Caesar Cipher', 'ver- und entschlüsseln', 'utils/caesar_cipher/caesar_cipher.html', 'rgb(128, 34, 34)', 'rgb(235, 199, 137)'))
 addUtil(new Util('Binomial Distribution', 'calculate probabilities', 'utils/binomial_distribution/binomial_distribution.html', 'midnightblue', 'white'))
